@@ -1,54 +1,75 @@
-# README Template
+# Product Review Classification Pipeline
 
-Below is a template provided for use when building your README file for students.
+A machine learning pipeline project that processes product review data to predict whether a customer recommends a product based on their review. The pipeline handles numerical, categorical, and text data through appropriate preprocessing steps and employs various classification models to make predictions.
 
-# Project Title
+## Project Overview
 
-Project description goes here.
+This project demonstrates how to:
+1. Build an end-to-end machine learning pipeline for text classification
+2. Process and transform mixed data types (text, categorical, numerical)
+3. Compare multiple machine learning models
+4. Fine-tune model parameters using Bayesian optimization
+5. Train and evaluate a transformer-based model (DistilBERT)
+
+The project uses a dataset of clothing product reviews to predict whether customers recommend the products based on various features including review text, age, product details, and more.
 
 ## Getting Started
 
-Instructions for how to get a copy of the project running on your local machine.
+### Prerequisites
 
-### Dependencies
+The project requires Python 3.7+ and the following libraries:
 
 ```
-Examples here
+pandas
+numpy
+scikit-learn
+transformers
+spacy
+matplotlib
+seaborn
+joblib
+datasets
+skopt
 ```
+
+All dependencies are listed in the requirements.txt file.
 
 ### Installation
 
-Step by step explanation of how to get a dev environment running.
-
-List out the steps
-
+1. Clone the repository:
 ```
-Give an example here
+git clone https://github.com/kelvinchanwh/dsnd-pipelines-project.git
+cd dsnd-pipelines-project
 ```
 
-## Testing
-
-Explain the steps needed to run any automated tests
-
-### Break Down Tests
-
-Explain what each test does and why
-
+2. Create and activate a virtual environment (optional but recommended):
 ```
-Examples here
+python -m .venv venv
+source .venv/bin/activate
 ```
 
-## Project Instructions
+3. Install the required packages:
+```
+pip install -r requirements.txt
+```
 
-This section should contain all the student deliverables for this project.
+4. Download the required spaCy language model:
+```
+python -m spacy download en_core_web_sm
+```
+
+## Project Structure
+
+- `starter.ipynb`: Main notebook containing all code and analysis
+- `data/reviews.csv`: Dataset of clothing product reviews
+- `results/`: Saved model checkpoints from the transformer model training
 
 ## Built With
 
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
-
-Include all items used to build project.
+* [scikit-learn](https://scikit-learn.org/) - Machine learning library
+* [Hugging Face Transformers](https://huggingface.co/transformers/) - For transformer models
+* [spaCy](https://spacy.io/) - NLP library for text preprocessing
+* [skopt](https://scikit-optimize.github.io/stable/) - For Bayesian optimization
 
 ## License
 
